@@ -3,6 +3,7 @@
 export DEETS="$1"
 export NICK="$2"
 export JOIN="$3"
+export USERNAME="${USER:-shellacks}"
 
 onconnect(){
 send "NICK $NICK"
@@ -14,7 +15,7 @@ printf "%b\r\n" "$1" >> sock
 
 while [ 1 ]; do
 
-	echo -e "USER $NICK 0 * :shell bot\r\n" > sock
+	echo -e "USER $USERNAME 0 * :https://github.com/xfnw/shellacks\r\n" > sock
 	onconnect
 
 	tail -f sock | openssl s_client "$DEETS" | while read -r raw
