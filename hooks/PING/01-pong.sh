@@ -1,0 +1,3 @@
+
+send "PONG :$PAR$TXT"
+
