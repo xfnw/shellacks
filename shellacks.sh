@@ -1,12 +1,12 @@
 #!/bin/zsh
 
 export DEETS="$1"
-export NICK="$2"
+export MYNICK="$2"
 export JOIN="$3"
 export USERNAME="${USER:-shellacks}"
 
 onconnect(){
-send "NICK $NICK"
+send "NICK $MYNICK"
 }
 send(){
 echo "> $1"

@@ -6,6 +6,7 @@
 	long="NO"
 
 	SOURCE=""
+	NICK=""
 	CMD=""
 	PAR=""
 	TXT=""
@@ -30,6 +31,7 @@
 		first="NO"
 	done
 	PAR="${PAR:1:512}"
+	NICK="${SOURCE%%\!*}"
 	echo "source $SOURCE tcmd $CMD par $PAR txt $TXT"
 	export SOURCE CMD PAR TXT
 
