@@ -1,0 +1,6 @@
+:set prompt ""
+
+import Data.Char
+import qualified Data.ByteString.Char8 as P
+import qualified Data.Map as M
+
