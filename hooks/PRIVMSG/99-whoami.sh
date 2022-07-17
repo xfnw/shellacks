@@ -1,3 +1,3 @@
 
-[ "$TXT" = "!whoami" ] && send "PRIVMSG $PAR :you are $NICK"
+[ "$TXT" = "!whoami" ] && send "PRIVMSG $REPLY :you are $NICK"
 

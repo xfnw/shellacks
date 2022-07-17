@@ -1,3 +1,3 @@
 
-[ "$TXT" = "!ping" ] && send "PRIVMSG $PAR :ponk! im a robot!"
+[ "$TXT" = "!ping" ] && send "PRIVMSG $REPLY :ponk! im a robot!"
 

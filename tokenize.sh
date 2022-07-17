@@ -7,6 +7,7 @@
 
 	SOURCE=""
 	NICK=""
+	REPLY=""
 	CMD=""
 	PAR=""
 	TXT=""
@@ -32,6 +33,10 @@
 	done
 	PAR="${PAR:1:512}"
 	NICK="${SOURCE%%\!*}"
+
+	REPLY="$PAR"
+	[[ "$REPLY" == "$MYNICK" ]] && REPLY="$NICK"
+
 	echo "source $SOURCE tcmd $CMD par $PAR txt $TXT"
 	export SOURCE CMD PAR TXT
 
